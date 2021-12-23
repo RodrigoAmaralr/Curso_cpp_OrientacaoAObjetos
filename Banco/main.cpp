@@ -6,18 +6,12 @@ using namespace std;
 
 int main() {
 	Conta umaConta;
-	umaConta.numero = "123456";
-	umaConta.cpfTitular = "123.456.789.10";
-	umaConta.nomeTitular = "Rodrigo";
-	umaConta.saldo = 100;
-
 	Conta umaOutraConta;
-	umaOutraConta.saldo = 200;
 
 	umaOutraConta.depositar(500);
 	umaOutraConta.sacar(200);
 
-	cout << "Uma conta: " << umaConta.saldo << " Uma Outra conta: " << umaOutraConta.saldo << endl;
+	cout << "Uma conta: " << umaConta.recuperaSaldo() << " Uma Outra conta: " << umaOutraConta.recuperaSaldo() << endl;
 
 
 	return 0;
