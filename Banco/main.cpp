@@ -2,6 +2,7 @@
 #include <string>
 #include "Conta.hpp"
 #include "Titular.hpp"
+#include "CPF.hpp"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ void ExibeSaldo(const Conta& conta) {
 
 int main() {
 	//Titular titular("123.456.789-10", "Rodrigo");
-	Conta umaConta("123456", Titular("123.456.789-10", "Rodrigo"));
+	Conta umaConta("123456", Titular(CPF("123.456.789-10"), "Rodrigo"));
 
 	umaConta.depositar(500);
 	umaConta.sacar(200);
@@ -21,7 +22,7 @@ int main() {
 	cout << "CPF: " << umaConta.recuperaCpfTitular() << endl;
 
 
-	Conta umaOutraConta("654321", Titular("123.456.722-11", "Amaral"));
+	Conta umaOutraConta("654321", Titular(CPF("123.456.722-11"), "Amaral"));
 
 	umaOutraConta.depositar(300);
 	umaOutraConta.sacar(50);
