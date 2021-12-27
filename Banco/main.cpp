@@ -5,13 +5,12 @@
 using namespace std;
 
 int main() {
-	Conta umaConta;
-	Conta umaOutraConta;
+	Conta umaConta("123456", "Rodrigo", "123.456.789-10");
 
-	umaOutraConta.depositar(500);
-	umaOutraConta.sacar(200);
+	umaConta.depositar(500);
+	umaConta.sacar(200);
 
-	cout << "Uma conta: " << umaConta.recuperaSaldo() << " Uma Outra conta: " << umaOutraConta.recuperaSaldo() << endl;
+	cout << "Uma conta: " << umaConta.recuperaSaldo() << endl;
 
 
 	return 0;

@@ -6,17 +6,14 @@ private:
 	std::string numero;
 	std::string cpfTitular;
 	std::string nomeTitular;
-	float saldo = 0;
+	float saldo;
 
 public:
+	Conta(std::string numero, std::string nomeTitular, std::string cpfTitular);
 	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	float recuperaSaldo() const;
 	std::string recuperaNomeTitular();
 	std::string recuperaCpfTitular();
 	std::string recuperaNumero();
-
-	void definirNomeTitular(std::string nomeTitular_);
-	void definirCpfTitular(std::string cpfTitular_);
-	void definirNumero(std::string numero_);
 };

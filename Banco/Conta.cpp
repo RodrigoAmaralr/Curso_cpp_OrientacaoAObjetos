@@ -3,6 +3,15 @@
 #include "Conta.hpp"
 #include <iostream>
 
+Conta::Conta(std::string numero, std::string nomeTitular, std::string cpfTitular):
+	numero(numero), 
+	nomeTitular(nomeTitular), 
+	cpfTitular(cpfTitular), 
+	saldo(0)
+{
+
+}
+
 void Conta::sacar(float valorASacar) {
 	if (valorASacar < 0) {
 		std::cout << "Nao pode sacar valor negativo" << std::endl;
@@ -39,14 +48,3 @@ std::string Conta::recuperaNumero() {
 	return numero;
 }
 
-void Conta::definirNomeTitular(std::string nomeTitular_) {
-	nomeTitular = nomeTitular_;
-}
-
-void Conta::definirCpfTitular(std::string cpfTitular_) {
-	cpfTitular = cpfTitular_;
-}
-
-void Conta::definirNumero(std::string numero_) {
-	numero = numero_;
-}
