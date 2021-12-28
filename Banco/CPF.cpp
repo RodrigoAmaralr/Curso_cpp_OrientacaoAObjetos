@@ -1,6 +1,6 @@
 #include "CPF.hpp"
 
-CPF::CPF(std::string numero) :numero(numero) {
+CPF::CPF(std::string numero):numero(numero) {
 
 }
 

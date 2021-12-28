@@ -18,7 +18,7 @@ public:
 	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	float recuperaSaldo() const;
-	std::string recuperaNomeTitular();
-	std::string recuperaCpfTitular();
+	//std::string recuperaNomeTitular();
+	//std::string recuperaCpfTitular();
 	std::string recuperaNumero();
 };

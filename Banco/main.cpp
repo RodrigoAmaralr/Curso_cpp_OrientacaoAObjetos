@@ -3,6 +3,7 @@
 #include "Conta.hpp"
 #include "Titular.hpp"
 #include "CPF.hpp"
+#include "Funcionario.hpp"
 
 using namespace std;
 
@@ -18,8 +19,8 @@ int main() {
 	umaConta.sacar(200);
 
 	ExibeSaldo(umaConta);
-	cout << "Nome: " << umaConta.recuperaNomeTitular() << endl;
-	cout << "CPF: " << umaConta.recuperaCpfTitular() << endl;
+	//cout << "Nome: " << umaConta.recuperaNomeTitular() << endl;
+	//cout << "CPF: " << umaConta.recuperaCpfTitular() << endl;
 
 
 	Conta umaOutraConta("654321", Titular(CPF("123.456.722-11"), "Amaral"));
@@ -28,10 +29,14 @@ int main() {
 	umaOutraConta.sacar(50);
 
 	ExibeSaldo(umaOutraConta);
-	cout << "Nome: " << umaOutraConta.recuperaNomeTitular() << endl;
-	cout << "CPF: " << umaOutraConta.recuperaCpfTitular() << endl;
+	//cout << "Nome: " << umaOutraConta.recuperaNomeTitular() << endl;
+	//cout << "CPF: " << umaOutraConta.recuperaCpfTitular() << endl;
 
 	cout << "Numeros de contas: " << Conta::recuperaNumeroDeContas() << endl;
+
+	Funcionario funcionario(CPF("123.456.789-10"), "Rodrigo Amaral", 1000.00);
+
+	cout << "Nome do Funcionario: " << funcionario.recuperaNome() << endl;
 
 
 	return 0;

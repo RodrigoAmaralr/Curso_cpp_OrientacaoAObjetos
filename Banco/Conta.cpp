@@ -41,13 +41,13 @@ float Conta::recuperaSaldo() const{
 	return saldo;
 }
 
-std::string Conta::recuperaNomeTitular() {
-	return titular.recuperaNomeTitular();
-}
-
-std::string Conta::recuperaCpfTitular() {
-	return titular.recuperaCpfTitular();;
-}
+//std::string Conta::recuperaNomeTitular() {
+//	return titular.recuperaNomeTitular();
+//}
+//
+//std::string Conta::recuperaCpfTitular() {
+//	return titular.recuperaCpfTitular();;
+//}
 
 std::string Conta::recuperaNumero() {
 	return numero;
