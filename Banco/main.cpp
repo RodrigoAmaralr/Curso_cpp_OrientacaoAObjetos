@@ -2,6 +2,7 @@
 #include <string>
 #include "Conta.hpp"
 #include "ContaPoupanca.hpp"
+#include "ContaCorrente.hpp"
 #include "Titular.hpp"
 #include "CPF.hpp"
 #include "Funcionario.hpp"
@@ -19,28 +20,23 @@ void RealizaSaque(Conta& conta)
 
 int main() {
 	//Titular titular("123.456.789-10", "Rodrigo");
-	Conta umaConta("123456", Titular(CPF("123.456.789-10"), "Rodrigo"));
-	//ContaPoupanca* umaConta = new ContaPoupanca("123456", Titular(CPF("123.456.789-10"), "Rodrigo"));
-	//delete umaConta;
+	ContaPoupanca umaConta("123456", Titular(CPF("123.456.789-10"), "Rodrigo"));
 
 	umaConta.depositar(500);
 	//umaConta.sacar(200);
 	RealizaSaque(umaConta);
 
 	ExibeSaldo(umaConta);
-	//cout << "Nome: " << umaConta.recuperaNomeTitular() << endl;
-	//cout << "CPF: " << umaConta.recuperaCpfTitular() << endl;
 
 
-	ContaPoupanca umaOutraConta("654321", Titular(CPF("123.456.722-11"), "Amaral"));
 
-	umaOutraConta.depositar(500);
+	ContaCorrente umaOutraConta("654321", Titular(CPF("123.456.722-11"), "Amaral"));
+
+	umaOutraConta.depositar(300);
 	//umaOutraConta.sacar(200);
 	RealizaSaque(umaOutraConta);
 
 	ExibeSaldo(umaOutraConta);
-	//cout << "Nome: " << umaOutraConta.recuperaNomeTitular() << endl;
-	//cout << "CPF: " << umaOutraConta.recuperaCpfTitular() << endl;
 
 	cout << "Numeros de contas: " << Conta::recuperaNumeroDeContas() << endl;
 

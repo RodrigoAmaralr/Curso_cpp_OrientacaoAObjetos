@@ -17,10 +17,11 @@ protected:
 public:
 	Conta(std::string numero, Titular titular); // contrutor
 	virtual ~Conta(); //Destrutor
-	virtual void sacar(float valorASacar);
+	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	float recuperaSaldo() const;
 	//std::string recuperaNomeTitular();
 	//std::string recuperaCpfTitular();
 	std::string recuperaNumero();
+	virtual float taxaDeSaque() const = 0;  // Metodo puramente virtual. =0 indica que não foi implementado e que as classes que herdarem devem implementar (Classe abstrata)
 };
