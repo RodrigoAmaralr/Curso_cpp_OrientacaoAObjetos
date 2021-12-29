@@ -20,6 +20,8 @@ void RealizaSaque(Conta& conta)
 int main() {
 	//Titular titular("123.456.789-10", "Rodrigo");
 	Conta umaConta("123456", Titular(CPF("123.456.789-10"), "Rodrigo"));
+	//ContaPoupanca* umaConta = new ContaPoupanca("123456", Titular(CPF("123.456.789-10"), "Rodrigo"));
+	//delete umaConta;
 
 	umaConta.depositar(500);
 	//umaConta.sacar(200);
